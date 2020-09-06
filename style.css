@@ -1,78 +1,127 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root {
+    --black: #2E3440;
+    --white_nord: #E5E9F0;
+    --green: #A3BE8C;
+    --red: #BF616A;
+    --yellow: #EBCB8B;
+    --orange: #D08770;
+    --gray: #3B4252;
+    --gray2: #7c899a;
 }
 
-body {
-    background-color: #2E3440;
-    color: white;
+html {
+    box-sizing: border-box;
     font-family: 'Monda', sans-serif;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black);
+    font-size: 1rem;
+    color: var(--white_nord);
+    padding: 0;
+    margin: 0;
+}
+
+h1 { 
+    font-size: 3rem;
+    margin: 0 0 1.5rem;
+}
+
+span {
+    color: var(--green);
+}
+
 .wrapper {
-    width: 960px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 80%;
     margin: 0 auto;
 }
 
 
-h1 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-}
-
-span {
-    color: #A3BE8C;
-}
-
-.search {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    height: 40vh;
-    margin-bottom: 2rem;
-}
-
 input {
-    padding: 0.5rem;
+    padding: 0.8rem;
     border: none;
     border-radius: 22px;
-    width: 400px;
+    background-color: var(--gray);
+    color: var(--white_nord);
+    font-size: 1rem;
+    outline: none;
+    margin-bottom: 2.5rem;
+    width: 450px;
+
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: flex-start;
+::placeholder {
+    color: var(--gray2);
+    opacity: 1;
     
 }
 
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .item1, .item2, .item3 {
-    justify-self: center;
+    width: 120px;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+
+}
+
+
+h2 {
+    margin: 0 0 0.8rem;
 }
 
 .tech {
-    color: #BF616A;
+    color: var(--red);
 }
-
 .work {
     color: #D08770;
 }
-
 .not_work {
     color: #EBCB8B;
 }
 
-li {
+ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    color: var(--white_nord);
+    text-decoration: none;
 }
 
-a {
-    color: white;
-    text-decoration: none;
+.tech_color a:hover {
+    color: var(--red);
+}
+
+.work_color a:hover {
+    color: var(--orange);
+}
+
+.not_work_color a:hover {
+    color: var(--yellow);
 }
