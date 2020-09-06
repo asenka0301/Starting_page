@@ -9,7 +9,7 @@
     --yellow: #EBCB8B;
     --orange: #D08770;
     --gray: #3B4252;
-    --gray2: #7c899a;
+    --gray1: #7c899a;
 }
 
 html {
@@ -50,7 +50,6 @@ span {
     margin: 0 auto;
 }
 
-
 input {
     padding: 0.8rem;
     border: none;
@@ -61,13 +60,11 @@ input {
     outline: none;
     margin-bottom: 2.5rem;
     width: 450px;
-
 }
 
 ::placeholder {
-    color: var(--gray2);
+    color: var(--gray1);
     opacity: 1;
-    
 }
 
 .container {
@@ -81,14 +78,11 @@ input {
     width: 120px;
 }
 
-
 @media (max-width: 600px) {
     .container {
         width: 100%;
     }
-
 }
-
 
 h2 {
     margin: 0 0 0.8rem;
@@ -97,9 +91,11 @@ h2 {
 .tech {
     color: var(--red);
 }
+
 .work {
     color: #D08770;
 }
+
 .not_work {
     color: #EBCB8B;
 }
@@ -109,6 +105,7 @@ ul {
     padding: 0;
     margin: 0;
 }
+
 a {
     color: var(--white_nord);
     text-decoration: none;
